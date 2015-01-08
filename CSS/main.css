@@ -1,0 +1,49 @@
+ *, *:: before, *::after {
+   {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+   }
+ }
+ body {
+   margin: 0 auto;
+ }
+ #header {
+   width: 100%;
+   background-image: url("../images/ocean.jpg");
+   background-position: center center;
+   background-size: cover;
+   height: 500px;
+   font-weight: 300px;
+   font-size: 50px;
+ }
+ #logo {
+   font-family: "Oswald", sans-serif;
+ }
+ p {
+   font-family: "Open Sans", sans-serif;
+ }
+ h1, h2 {
+   font-family: "Oswald", sans-serif;
+ }
+ .lowpic {
+   display: inline-block;
+   width: 325px;
+   height: 320px;
+   text-align: center;
+   vertical-align: top;
+   line-height: 0px;
+   padding: 0px;
+ }
+ .one {
+   background-image: url("../images/futureislands.jpg");
+ }
+ .two {
+   background-image: url("../images/holdsteady.jpg");
+ }
+ .three {
+   background-image: url("../images/St_Vincent.jpg");
+ }
+ .four {
+   background-image: url("../images/thenational.jpg");
+ }
