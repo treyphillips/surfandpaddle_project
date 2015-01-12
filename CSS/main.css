@@ -8,6 +8,38 @@
  body {
    margin: 0 auto;
    max-width: 1300px;
+   max-height: 1200px;
+ }
+ .tint {
+   position: relative;
+   float: left;
+   cursor: pointer;
+ }
+ .tint:before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: rgba(25, 110, 177, 0.8);
+   -moz-transition: background .3s linear;
+   -webkit-transition: background .3s linear;
+   -o-transition: background .3s linear;
+   transition: background .3s linear;
+ }
+ a {
+   color: #A3B2BE;
+ }
+ a:visited {
+   color: #A3B2BE;
+ }
+ a:hover {
+   color: #196EB1;
+ }
+ .tint:hover:before {
+   background: none;
  }
  .hz-center {
    position: relative;
@@ -17,7 +49,7 @@
  #header {
    width: 100%;
    /*background-image: url("../images/ocean.jpg");*/
-
+   
    background-position: center center;
    background-size: cover;
    height: 500px;
@@ -31,8 +63,9 @@
  }
  #header h1 {
    font-weight: lighter;
-   font-size: 2.5em;
+   font-size: 122px;
    padding-bottom: 0px;
+   margin-top: 153px;
  }
  #header p {
    color: #0B3550;
@@ -42,6 +75,11 @@
  }
  .about {
    margin-right: 9px;
+ }
+ #mag {
+   position: absolute;
+   display: inline-block;
+   bottom: -10px;
  }
  .magnifier {} #logo {
    min-width: 580px;
@@ -86,6 +124,21 @@
  #tophead {
    width: 60%;
    font-size: 30px;
+   color: #0B3551;
+ }
+ .author {
+   color: #005EAC;
+ }
+ .on {
+   color: #A3B3BE;
+   font-size: 14px;
+   margin-left: 8px;
+ }
+ .date {
+   color: #A3B3BE;
+   text-decoration: underline;
+   font-size: 14px;
+   font-weight: 400;
  }
  #maintext p {
    display: inline-block;
@@ -114,18 +167,8 @@
    margin-left: 100px;
    margin-right: 50px;
  }
- #content::after {
-   content: "";
-   display: block;
-   clear: both;
- }
- /*#woah h2 {
-   border-style: solid;
-   border-left: 2px;
- }*/
-
  #maintext {
-   width: 60%;
+   width: 55%;
    clear: both;
    display: inline-block;
  }
@@ -135,12 +178,27 @@
  #maintext .date p {
    text-decoration: underline;
  }
+ #rad {
+   border-left: 2px solid #9bacb8;
+   margin-left: 13px;
+ }
+ #rad h2 {
+   margin-left: 19px;
+   font-size: 30px;
+   color: #005EAC;
+   font-family: "Oswald", sans-serif;
+   font-weight: 400;
+ }
  #shareicons {
    verticle-align: middle;
    height: 33px;
    font-family: "Open Sans", sans-serif;
    font-size: 12px;
    display: inline-block;
+ }
+ .comm {
+   bottom: 27px;
+   margin-left: 34px;
  }
  #comments {
    width: 160px;
@@ -156,23 +214,54 @@
    height: 33px;
    width: 33px;
    background-position: center;
+   background-color: #5E686F;
+   clear: both;
  }
- #comments {
-   display: inline-block;
+ #comments:hover {
+   background: rgba(25, 110, 177, 0.8);
+   -moz-transition: background .3s linear;
+   -webkit-transition: background .3s linear;
+   -o-transition: background .3s linear;
+   transition: background .3s linear;
+ }
+ #com_img img:hover {
+   background: rgba(25, 110, 177, 0.8);
+   -moz-transition: background .3s linear;
+   -webkit-transition: background .3s linear;
+   -o-transition: background .3s linear;
+   transition: background .3s linear;
+ }
+ #later:hover {
+   background: rgba(25, 110, 177, 0.8);
+   -moz-transition: background .3s linear;
+   -webkit-transition: background .3s linear;
+   -o-transition: background .3s linear;
+   transition: background .3s linear;
+ }
+ #share:hover {
+   background: rgba(25, 110, 177, 0.8);
+   -moz-transition: background .3s linear;
+   -webkit-transition: background .3s linear;
+   -o-transition: background .3s linear;
+   transition: background .3s linear;
+ }
+ #shareicons #later img {
+   height: inherit;
+   background-color: #5E686F;
+ }
+ #shareicons img {
+   height: inherit;
+   background-color: #5E686F;
  }
  #comments span {
    position: relative;
-   bottom: 7px;
+   bottom: 25px;
    display: inline-block;
- }
- #shareicons img {
-   background-color: #5E686F;
  }
  #later {
    width: 129px;
    height: 32px;
    background-color: #A3B3BE;
-   verticle-align: middle;
    display: inline-block;
    float: left;
    margin-left: 8px;
@@ -180,7 +269,7 @@
  }
  #later span {
    position: relative;
-   bottom: 3px;
+   bottom: 11px;
  }
  #later img {
    height: auto;
@@ -197,7 +286,7 @@
  }
  #share span {
    position: relative;
-   bottom: 8px;
+   bottom: 11px;
  }
  #sidesquare img {
    width: 277px;
@@ -218,18 +307,27 @@
    height: 302;
    width: 277;
  }
+ #circlepic {
+   margin-top: -159px;
+   margin-right: 52px;
+ }
+ #circlepic .circlink {
+   text-decoration: none;
+   font-family: "Open Sans", sans-serif;
+   color: #A7B6C2;
+ }
  #circlepic p {
    text-align: center;
    font-size: 19px;
    font-weight: bold;
    color: #196FB1;
  }
- #circlepic #anne {
-   background: linear-gradient(rgba(17, 117, 192, 0.85), rgba(17, 117, 192, 0.85));
+ #circlepic .anne p {
+   color: #196FB1;
  }
  .profile-pic {
-   height: 88px;
-   width: 91px;
+   height: 87px;
+   width: 88px;
    border-radius: 100%;
    -webkit-border-radius: 100%;
    -moz-border-radius: 100%;
@@ -244,22 +342,17 @@
    margin-top: 44px;
    margin-left: 16px;
  }
- #circlepic {
-   margin-top: -130px;
-   margin-right: 47px;
- }
- #circlepic .circlink {
-   text-decoration: none;
-   font-family: "Open Sans", sans-serif;
-   color: #A7B6C2;
- }
-
- }
  #sidesquare {
    float: right;
    width: 30%;
    clear: both;
    display: inline-block;
+ }
+ #aboutthisad {
+   margin-left: 196px;
+   font-family: "Open Sans", sans-serif;
+   font-size: 14px;
+   font-weight: bolder;
  }
  #sidetext {
    float: right;
@@ -267,8 +360,12 @@
    clear: both;
    diplay: inline-block;
  }
+ #sidepic p {
+   text-align: left;
+ }
  #circlepic h3, p {
    font-family: "Oswald", sans-serif;
+   margin-top: 48px;
  }
  #circlepic h3 {
    color: #196FB1;
@@ -281,6 +378,8 @@
    width: 100%;
    text-align: center;
    clear: both;
+   border-top: solid 1px #E1E7EA;
+   margin-top: 44px;
  }
  #bottomheadline h1 {
    width: 100%;
@@ -303,9 +402,11 @@
  }
  .lowpic p {
    bottom: 0;
-   text-size: 100px;
+   text-size: 90px;
    font-weight: bold;
    position: absolute;
+   line-height: normal;
+   margin-left: 17px;
  }
  .one {
    background-image: url("../images/futureislands.jpg");
@@ -350,7 +451,6 @@
    top: 12px;
    font-size: 13px;
    text-decoration: none;
-   font-family: "Open Sans", sans-serif;
    color: #A3B3BE;
  }
  .footer li {
@@ -367,4 +467,22 @@
    width: 986px;
    position: relative;
    left: 151px;
+ }
+ #footdiv {
+   font-family: "Open Sans", sans-serif;
+   font-weight: bold;
+   float: right;
+   margin-left: none;
+   position: relative;
+   top: 12px;
+   font-size: 13px;
+   text-decoration: none;
+   color: #A3B3BE;
+   margin-right: 380px;
+ }
+ #footdiv p {
+   bottom: 55px;
+ }
+ #footdiv ul a {
+   text-decoration: none;
  }
